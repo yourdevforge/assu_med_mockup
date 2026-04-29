@@ -1,0 +1,29 @@
+
+> preview
+> nuxt preview --host 127.0.0.1 --port 3000
+
+[nuxt] modules:before: 0.137ms
+[36mi[39m Module [36m@nuxt/devtools[39m took [36m278.06ms[39m to setup.
+[nuxt] pages:routerOptions: 0.024ms
+[nuxt] pages:extend: 0.03ms
+[nuxt] pages:resolved: 0.033ms
+[36mi[39m Module [36mnuxt:pages[39m took [36m26.53ms[39m to setup.
+[36mi[39m Module [36mnuxt:meta[39m took [36m5.38ms[39m to setup.
+[nuxt] kit:compatibility: 0.883ms
+[36mi[39m Module [36mnuxt:components[39m took [36m11.26ms[39m to setup.
+[36mi[39m Module [36mnuxt:imports[39m took [36m2.35ms[39m to setup.
+[36mi[39m Module [36mnuxt:nuxt-config-schema[39m took [36m0.61ms[39m to setup.
+[36mi[39m Module [36m@nuxt/telemetry[39m took [36m0.14ms[39m to setup.
+[nuxt] imports:dirs: 0.017ms
+[nuxt] imports:sources: 0.063ms
+[nuxt] imports:context: 0.133ms
+[nuxt] imports:extend: 0.065ms
+[nuxt] builder:generateApp: 0.022ms
+[nuxt] schema:extend: 0.023ms
+[nuxt] schema:resolved: 0.015ms
+[nuxt] modules:done: 9.942ms
+[nuxt] nitro:config: 152.913ms
+|
+x  Cannot find [36mnitro.json[39m. Did you run [36mnuxi build[39m first? Search path:
+|  C:/dev/assumedmockup/127.0.0.1/.output/nitro.json
+|  C:/dev/assumedmockup/127.0.0.1/.output/nitro.json
