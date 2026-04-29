@@ -1,3 +1,19 @@
+<script setup>
+function submitNewsletter(event) {
+  const formData = new FormData(event.currentTarget);
+  const email = String(formData.get('email') || '').trim();
+
+  if (!email) {
+    return;
+  }
+
+  const subject = encodeURIComponent('Newsletter subscription request');
+  const body = encodeURIComponent(`Please add ${email} to the Assu-Med newsletter.`);
+
+  window.location.href = `mailto:info@assumed.co.za?subject=${subject}&body=${body}`;
+}
+</script>
+
 <template>
   <div class="home-page">
     <header class="site-header">
@@ -5,7 +21,7 @@
         <div class="top-bar__inner">
           <div class="contact-links" aria-label="Contact details">
             <a href="mailto:info@assumed.co.za">info@assumed.co.za</a>
-            <a href="#location">Find our location</a>
+            <NuxtLink to="/contact#office-map">Find our location</NuxtLink>
           </div>
           <strong>24 HOUR AMBULANCE SERVICES - CALL CENTRE 021 879 4716</strong>
         </div>
@@ -96,18 +112,6 @@
             <strong>E-mail:</strong>
             <a href="mailto:info@assumed.co.za">info@assumed.co.za</a>
           </p>
-          <p class="footer-social">
-            <a href="#facebook"
-              >Follow us on Facebook
-              <span aria-hidden="true"><SvgIcon name="facebook" /></span
-            ></a>
-          </p>
-          <p class="footer-social">
-            <a href="#twitter"
-              >Follow us on Twitter
-              <span aria-hidden="true"><SvgIcon name="twitter" /></span
-            ></a>
-          </p>
         </div>
 
         <div class="footer-col">
@@ -115,12 +119,14 @@
           <p class="footer-col__sub">
             Stay informed - sign up to our Newsletter.
           </p>
-          <form class="newsletter" @submit.prevent>
+          <form class="newsletter" @submit.prevent="submitNewsletter">
             <input
               type="email"
+              name="email"
               class="newsletter__input"
               placeholder="Your Email Address"
               aria-label="Your Email Address"
+              required
             />
             <button
               type="submit"

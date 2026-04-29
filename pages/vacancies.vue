@@ -1,3 +1,11 @@
+<script setup>
+useSeoMeta({
+  title: 'Vacancies',
+  description:
+    'View current Assu-Med ambulance service vacancies for clinical roles including BLS and ILS positions.',
+});
+</script>
+
 <template>
   <div>
     <section class="page-hero" aria-labelledby="vacancies-hero-title">

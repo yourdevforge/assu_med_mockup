@@ -3,14 +3,22 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "dev": "nuxt dev",
+    "dev:local": "nuxt dev --host 127.0.0.1 --port 3000",
     "build": "nuxt build",
-    "dev": "nuxt dev --host 127.0.0.1 --port 3000",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "start": "nuxt preview",
+    "typecheck": "nuxt typecheck",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "nuxt": "^3.21.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^7.0.0-beta.1",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.2.7"
+  }
 }

@@ -1,3 +1,11 @@
+<script setup>
+useSeoMeta({
+  title: 'Who We Are',
+  description:
+    'Meet Assu-Med, a private Advanced Life Support ambulance service based in Watergate, Mitchell\'s Plain.',
+});
+</script>
+
 <template>
   <div>
     <section class="page-hero" aria-labelledby="page-hero-title">

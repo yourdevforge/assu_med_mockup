@@ -1,4 +1,10 @@
 <script setup>
+useSeoMeta({
+  title: 'Gallery',
+  description:
+    'View Assu-Med ambulance service media, response crew moments, clinical readiness, and on-site medical support highlights.',
+});
+
 const videos = [
   { id: 1, title: 'Emergency Response Team', label: 'On scene', duration: '0:42' },
   { id: 2, title: 'Clinical Crew Readiness', label: 'Operations', duration: '1:08' },

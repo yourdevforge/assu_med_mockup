@@ -1,3 +1,11 @@
+<script setup>
+useSeoMeta({
+  title: 'Services Offered',
+  description:
+    'Explore Assu-Med ambulance services, including primary emergency response, inter-facility transfers, advanced life support, and on-site medical solutions.',
+});
+</script>
+
 <template>
   <div>
     <section class="page-hero" aria-labelledby="services-hero-title">
@@ -123,7 +131,7 @@
             remains the responsibility of each of us to do our part in limiting the spread.
           </p>
           <p>
-            If you display <a class="covid-section__link" href="#symptoms">symptoms</a>, call
+            If you display symptoms, call
             your GP and follow their instructions or call the coronavirus emergency helpline on
             <a class="covid-section__link" href="tel:0800029999">0800 029 999</a>.<br />
             For regular updates and more information about COVID-19 please visit

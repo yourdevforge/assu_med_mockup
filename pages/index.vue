@@ -1,4 +1,10 @@
 <script setup>
+useSeoMeta({
+  title: '24 Hour Ambulance Services',
+  description:
+    'Assu-Med provides private emergency response, patient transfer, and on-site medical support from Mitchell\'s Plain in the Western Cape.',
+});
+
 const testimonials = [
   {
     quote:
@@ -104,7 +110,7 @@ function nextTestimonials() {
           <p class="page-hero__tagline">
             <strong>"The reduction in waiting time can save lives."</strong>
           </p>
-          <a class="page-hero__button" href="#about-us">Learn more</a>
+          <a class="page-hero__button" href="#ambulance-services">Learn more</a>
         </div>
 
         <div class="page-hero__call-centre" aria-label="Call centre">

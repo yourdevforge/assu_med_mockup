@@ -1,3 +1,28 @@
+<script setup>
+useSeoMeta({
+  title: 'Contact Us',
+  description:
+    'Contact Assu-Med for 24-hour ambulance services, patient transfer support, event standby, and emergency medical assistance.',
+});
+
+function submitContactForm(event) {
+  const formData = new FormData(event.currentTarget);
+  const details = [
+    ['Name', formData.get('name')],
+    ['Phone', formData.get('phone')],
+    ['Email', formData.get('email')],
+    ['Message', formData.get('message')],
+  ]
+    .map(([label, value]) => `${label}: ${String(value || '').trim()}`)
+    .join('\n');
+
+  const subject = encodeURIComponent('Website enquiry');
+  const body = encodeURIComponent(details);
+
+  window.location.href = `mailto:info@assumed.co.za?subject=${subject}&body=${body}`;
+}
+</script>
+
 <template>
   <div>
     <section class="hero" aria-labelledby="contact-hero-title">
@@ -49,7 +74,7 @@
       </div>
 
       <div class="contact-block__inner">
-        <form class="contact-form" @submit.prevent>
+        <form class="contact-form" @submit.prevent="submitContactForm">
           <div class="contact-form__header">
             <p class="contact-form__eyebrow">Send a Message</p>
             <h2 class="contact-form__title">We respond within 24 hours.</h2>

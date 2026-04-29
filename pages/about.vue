@@ -1,3 +1,11 @@
+<script setup>
+useSeoMeta({
+  title: 'About Us',
+  description:
+    'Learn about Assu-Med Ambulance Services, a private Advanced Life Support provider serving Mitchell\'s Plain and the wider Western Cape.',
+});
+</script>
+
 <template>
   <div>
     <section class="page-hero" aria-labelledby="about-hero-title">

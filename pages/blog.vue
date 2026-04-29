@@ -1,4 +1,10 @@
 <script setup>
+useSeoMeta({
+  title: 'Blog',
+  description:
+    'Read Assu-Med news, emergency care stories, community updates, and practical health advice from the ambulance services team.',
+});
+
 const posts = [
   {
     id: 1,
@@ -147,7 +153,7 @@ const cleanTitle = (title) => title.replace(/â€”/g, '-');
       </div>
 
       <div class="blog-list__inner">
-        <article v-for="post in posts" :key="post.id" :class="['blog-card', { 'blog-card--featured': post.id === 1 }]">
+        <article v-for="post in posts" :id="`post-${post.id}`" :key="post.id" :class="['blog-card', { 'blog-card--featured': post.id === 1 }]">
           <div :class="['blog-card__media', `blog-card__media--${post.tone}`]" role="img" :aria-label="`Image for ${post.title}`">
             <img :src="`https://images.pexels.com/photos/${postImages[post.id - 1]}/pexels-photo-${postImages[post.id - 1]}.jpeg?auto=compress&cs=tinysrgb&w=760`" alt="" />
             <span class="blog-card__category">{{ postCategories[post.id - 1] }}</span>
