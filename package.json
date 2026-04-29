@@ -1,0 +1,16 @@
+{
+  "name": "assu-med-mock1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host 127.0.0.1 --port 3000",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.21.2"
+  },
+  "devDependencies": {}
+}
