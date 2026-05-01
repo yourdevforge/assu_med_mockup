@@ -1,0 +1,9 @@
+services:
+  assu_med_mockup:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: assu_med_mockup
+    ports:
+      - "4002:3000"
+    restart: unless-stopped
